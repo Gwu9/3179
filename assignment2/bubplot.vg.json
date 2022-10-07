@@ -3,7 +3,7 @@
   "width": 600,
   "height": 500,
   "title": "Win Games per NBA Team",
-  "data": {"url": "https://gwu9.github.io/3179/assignment2//NBA team and location W &L.csv"},
+  "data": {"url": "https://gwu9.github.io/3179/assignment2/NBA team and location W &L.csv"},
   "params":[
     {
       "name":"Conference_selection",
