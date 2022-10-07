@@ -5,7 +5,7 @@
       "column": ["Total Rebounds_per_Game", "Points_per_Game", "Assists_per_Game","Field Goal Percentage"]
     },
     "spec": {
-      "data": {"url": "/five MVP .csv"},
+      "data": {"url": "https://github.com/Gwu9/3179/blob/main/assignment2/five MVP .csv"},
       "mark": "point",
       "params": [
         {
