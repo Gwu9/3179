@@ -58,7 +58,7 @@
         "scale":{
           "domain":[
              "Eastern Conference",
-              "Western Conference
+              "Western Conference"
           ],
           "range":[
             "#e41a1c",
