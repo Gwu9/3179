@@ -54,7 +54,7 @@
 "layer": [
   {
     "data": {
-      "url": "/america_g.json",
+      "url": "https://gwu9.github.io/3179/assignment2/america_g.json",
       "format": {
         "type": "topojson",
         "feature": "ne_110m_admin_1_states_provinces"
@@ -64,7 +64,7 @@
       "lookup":"properties.name",
       "from":{
         "data":{
-          "url":"/data.json"
+          "url":"https://gwu9.github.io/3179/assignment2/data.json"
         },
         "key":"name",
         "fields":["number"]
