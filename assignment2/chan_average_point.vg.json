@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Top5 Championship Team",
     "data": {
-      "url": "/chan_averagepo.csv"
+      "url": "https://gwu9.github.io/3179/assignment2/chan_averagepo.csv"
     },
     "vconcat": [
       {
