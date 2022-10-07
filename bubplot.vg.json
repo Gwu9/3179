@@ -3,36 +3,28 @@
   "width": 600,
   "height": 500,
   "title": "Win Games per NBA Team",
-  "data": {"url": "/NBA team and location W &L.csv"},
+  "data": {"url": "https://github.com/Gwu9/3179/blob/main/NBA%20team%20and%20location%20W%20%26L.csv"},
   "params":[
     {
-      "name":"Division_selection",
+      "name":"Conference_selection",
       "bind":{
         "input":"select",
         "options":[
           null,
-          "Pacific Division",
-          "Central Division",
-          "Atlantic Division",
-          "Southeast Division",
-          "Southwest Division",
-          "Northwest Division"
+          "Eastern Conference",
+          "Western Conference"
         ],
         "labels":[
           "Show All",
-          "Pacific Division",
-          "Central Division",
-          "Atlantic Division",
-          "Southeast Division",
-          "Southwest Division",
-          "Northwest Division"
+           "Eastern Conference",
+          "Western Conference"
         ],
-        "name":"Division Selection:"
+        "name":"Conference Selection:"
       }
     }
   ],
   "transform":[
-    {"filter":"Division_selection == null || datum.Division == Division_selection"}
+    {"filter":"Conference_selection == null || datum.Conference == Conference_selection"}
 
   ],
   "mark": "circle",
@@ -61,25 +53,16 @@
         "legend":{"format":","}
       },
       "color":{
-        "field":"Division",
+        "field":"Conference",
         "type":"nominal",
         "scale":{
           "domain":[
-            "Pacific Division",
-            "Central Division",
-            "Atlantic Division",
-            "Southeast Division",
-            "Southwest Division",
-            "Northwest Division"
+            "Eastern Conference",
+            "Western Conference"
           ],
           "range":[
             "#e41a1c",
-            "#984ea3",
-            "#ff7f00",
-            "#a6cee3",
-            "#377eb8",
-            "#a65628"
-
+            "#984ea3"
           ]
         }
       },
