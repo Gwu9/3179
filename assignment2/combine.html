@@ -30,28 +30,9 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
-        <img src="NBA-Emblem.jpeg" width = "200" height = "100"/>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
       <div class="pure-u-1-2">
         <h1>NBA Analysis</h1>
         <p>Author: Guohua Wu</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <p class = "description-bottom">This report will introduce the locations of NBA teams in United States. Meanwhile, it also shows the games are won and losed 
-          for NBA teams. To further explore NBA teams the report contains top five champtionship team to show the avergae points during thier
-          championship sessions. Players are also important to teams, thus, there are top5 MVP active players with five different variables to 
-          analysis their performance.</p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -92,55 +73,7 @@
 
     <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-5"></div>
-        <img src = "logos/boston celtics.png" width ="150", height="150"/>
-      </div>
-        <img src = "logos/los angeles lakers.png" width ="150", height="150"/>
-      </div>
-        <img src = "logos/golden state warriors.png" width ="150", height="150"/>
-      </div>
-        <img src = "logos/chicago bulls.png" width ="150", height="150"/>
-      </div>
-        <img src = "logos/nba-san-antonio-spurs-logo-480x480.png" width ="150", height="150"/>
-      </div>
-    </div>
-        <div class="pure-u-1-5"></div>
-       <div id="vis3" class="vis-container"></div>
-      </div>
-    </div>
-    <div class="pure-u-1-5"></div>
-          <h2>Average Point per game</h2>
-          <p class = "description-bottom">This idiom shows the top five championship teams (Boston Celtics, Los Angeles Lakers, Golden State Warriors,
-             Chicago Bulls and San Antonio Suprs). Boston Celtics and Los Angeles Lakers won 17 champs; 
-             Golden State Warriors won 7 champs followed the two teams. The average point per game for Boston Celtics 
-             over 100 during the champ sessions, which played very steadily. While the average point per game for 
-             Los Angeles Lakers is waved between 88 to 122. Overall, those top five championship teams’ average 
-             point per game are floated between 90 to 128.  </p>
-        </div>
-      </div>
-    <!-- end pure grid group -->
-
-     <!-- pure grid group -->
-     <div class="pure-g">
-          <div class="pure-u-1-6"></div>
-         <div id="vis4" class="correlation-container"></div>
-        </div>
-      </div>
-      <div class="pure-u-1-6"></div>
-            <h2>Top5 MVP Active Players</h2>
-            <p class = "description-bottom">This correlation plot choose four variables to analysis top five MVP active players. The four variables include field goal percentage, 
-                total rebounds per game, point per game and assists per game. In addition, LeBron James got four MVP, Nikola Jokic, 
-                Stephen Curry and Glannis Antetokounmpo got 2 MVP and James Harden got 1 MVP. 
-                There is a positive relationship between field goal percentage and total rebounds per game. Point per game and assists per game also 
-                show a positive linear relationship. Overall, those four variables are showed positive relationship with each other. 
-                Thus, the four parameters can analysis the performance for players.  </p>
-          </div>
-        </div>
-      
-      <!-- end pure grid group -->
-
+    
     <div class="pure-g">
       <div class="pure-u-1-2 small-font">
         <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">Guohua Wu
@@ -153,17 +86,10 @@
 
   <script type="text/javascript">
     var specVis1 = "https://github.com/Gwu9/3179/blob/main/assignment2/bubplot.vg.json";
-    var specVis2 = "https://github.com/Gwu9/3179/blob/main/assignment2/james.vg.json";
-    var sepcVis3 = "/chan_average_point.vg.json"
-    var sepcVis4 = "/scatter.json"
+    var specVis2 = "https://github.com/Gwu9/3179/blob/main/assignment2/james.vg.json"
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
-
-    vegaEmbed('#vis2', specVis2, { "actions": false });
-
-    vegaEmbed('#vis3',sepcVis3,{"action": false});
-
-    vegaEmbed('#vis4', sepcVis4, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis2', sepcVis2, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
