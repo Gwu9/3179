@@ -1,0 +1,32 @@
+
+   [
+    {"lon":-112.073844, "lat":33.448457, "name":"Arizona", "city":"Phoenix", "number":1,"Team":"Phoenix Suns", "Year":"1968","Division":"Pacific Division"},
+    {"lon":-121.468926, "lat":38.555605, "name":"California", "city":"Sacramento","number":4,"Team":"Sacramento Kings","Year":"1923","Division":"Pacific Division"},
+    {"lon":-118.2437, "lat":34.0522, "name":"California", "city":"Los Angeles","number":4, "Team":"Los Angeles Lakers", "Year":"1947","Division":"Pacific Division"},
+    {"lon":-118.2437, "lat":34.0522, "name":"California", "city":"Los Angeles","number":4, "Team":"Los Angeles Clippers", "Year":"1970","Division":"Pacific Division"},
+    {"lon":-122.4194, "lat":37.7749, "name":"California", "city":"San Francisco","number":4,"Team":"Golden State Warriors","Year":"1946", "Division":"Pacific Division"},
+    {"lon":-104.984167, "lat":39.7391667, "name":"Colorado", "city":"Denver","number":1, "Team":"Denver Nuggets", "Year":"1967","Division":"Northwest Division"},
+    {"lon":-80.1918, "lat":25.7617, "name":"Florida", "city":"Miami","number":2,"Team":"Miami Heat", "Year":"1988","Division":"Southeast Division"},
+    {"lon":-81.3789, "lat":28.5384, "name":"Florida", "city":"Orlando","number":2,"Team":"Orlando Magic", "Year":"1989", "Division":"Southeast Division"},
+    {"lon":-84.39, "lat":33.76, "name":"Georgia", "city":"Atlanta","number":1,"Team":"Atlanta Hawks", "Year":"1946", "Division":"Southeast Division"},
+    {"lon":-87.6298, "lat":41.8781, "name":"Illinois", "city":"Chicago","number":1,"Team":"Chicago Bulls", "Year":"1966", "Division":"Central Division"},
+    {"lon":-86.147685, "lat":39.790942, "name":"Indiana", "city":"Indianapolis","number":1,"Team":"Indiana Pacers", "Year":"1967", "Division":"Central Division"},
+    {"lon":-90.0715, "lat":29.9511, "name":"Louisiana", "city":"New Orleans","number":1,"Team":"New Orleans Pelicans","Year":"1988", "Division":"Southwest Division"},
+    {"lon":-71.0275, "lat":42.2352, "name":"Massachusetts", "city":"Boston","number":1,"Team":"Boston Celtics","Year":"1946", "Division":"Atlantic Division"},
+    {"lon":-83.0458, "lat":42.3314, "name":"Michigan", "city":"Detroit","number":1,"Team":"Detroit Pistons","Year":"1941", "Division":"Central Division"},
+    {"lon":-93.2650, "lat":44.9778, "name":"Minnesota", "city":"Minneapolis","number":1,"Team":"Minnesota Timberwolves", "Year":"1989", "Division":"Northwest Division"},
+    {"lon":-73.9442, "lat":40.6782, "name":"New York", "city":"Brooklyn","number":2,"Team":"Brooklyn Nets", "Year":"1967", "Division":"Atlantic Division"},
+    {"lon":-74.0060, "lat":40.7128, "name":"New York", "city":"New York City","number":2,"Team":"New York Knicks", "Year":"1946", "Division":"Atlantic Division"},
+    {"lon":-80.8431, "lat":35.2271, "name":"North Carolina", "city":"Charlotte","number":1,"Team":"Charlotte Hornets","Year":"1988", "Division":"Southeast Division"},
+    {"lon":-81.6944, "lat":41.4993, "name":"Ohio", "city":"Cleveland","number":1,"Team":"Cleveland Cavaliers","Year":"1970","Division":"Central Division"},
+    {"lon":-97.534994, "lat":35.482309, "name":"Oklahoma", "city":"Oklahoma City","number":1,"Team":"Oklahoma City Thunder", "Year":"2008", "Division":"Northwest Division"},
+    {"lon":-122.6784, "lat":45.5152, "name":"Oregon", "city":"Portland","number":1,"Team":"Portland Trail Blazers","Year":"1970","Division":"Northwest Division"},
+    {"lon":-75.1652, "lat":39.9526, "name":"Pennsylvania", "city":"Philadelphia","number":1,"Team":"Philadelphia 76ers", "Year":"1946","Division":"Atlantic Division"},
+    {"lon":-90.0490, "lat":35.1495, "name":"Tennessee", "city":"Memphis","number":1,"Team":"Memphis Grizzlies","Year":"1995","Division":"Southwest Division"},
+    {"lon":-96.7970, "lat":32.7767, "name":"Texas", "city":"Dallas","number":3,"Team":"Dallas Mavericks", "Year":"1980", "Division":"Southwest Division"},
+    {"lon":-98.4946, "lat":29.4252, "name":"Texas", "city":"San Antonio","number":3,"Team":"San Antoino Spurs", "Year":"1967", "Division":"Southwest Division"},
+    {"lon":-95.3698, "lat":29.7604, "name":"Texas", "city":"Houston","number":3,"Team":"Houston Rockets", "year":"1967","Division":"Southwest Division"},
+    {"lon":-111.892622, "lat":40.7547, "name":"Utah", "city":"Salt Lake City","number":1,"Team":"Utah Jazz","Year":"1974","Division":"Northwest Division"},
+    {"lon":-120.7401, "lat":47.7511, "name":"Washington", "city":"Washington","number":1,"Team":"Washington Wizards", "Year":"1961", "Division":"Southeast Division"}
+  ]
+    

@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 500,
+  "title": "Win Games per NBA Team",
+  "data": {"url": "/NBA team and location W &L.csv"},
+  "params":[
+    {
+      "name":"Division_selection",
+      "bind":{
+        "input":"select",
+        "options":[
+          null,
+          "Pacific Division",
+          "Central Division",
+          "Atlantic Division",
+          "Southeast Division",
+          "Southwest Division",
+          "Northwest Division"
+        ],
+        "labels":[
+          "Show All",
+          "Pacific Division",
+          "Central Division",
+          "Atlantic Division",
+          "Southeast Division",
+          "Southwest Division",
+          "Northwest Division"
+        ],
+        "name":"Division Selection:"
+      }
+    }
+  ],
+  "transform":[
+    {"filter":"Division_selection == null || datum.Division == Division_selection"}
+
+  ],
+  "mark": "circle",
+  "encoding": {
+    "x": {"field": "L", 
+           "type": "quantitative",
+           "title":  "Lose Games",
+           "axis": {"tickCount": 6}},
+    "y": {"field": "W", 
+          "type": "quantitative",
+          "title":"Win Games",
+           "axis": {"tickCount": 5}}
+          },
+  "layer":[
+    {
+      "mark":"circle",
+      "encoding":{
+        "size":{
+          "field":"Games",
+          "type":"quantitative",
+          "scale":{
+            "type":"threshold",
+          "domain":[1000,2000,3000,4000,5000],
+          "range":[30,50,150,220,350,500]
+        },
+        "legend":{"format":","}
+      },
+      "color":{
+        "field":"Division",
+        "type":"nominal",
+        "scale":{
+          "domain":[
+            "Pacific Division",
+            "Central Division",
+            "Atlantic Division",
+            "Southeast Division",
+            "Southwest Division",
+            "Northwest Division"
+          ],
+          "range":[
+            "#e41a1c",
+            "#984ea3",
+            "#ff7f00",
+            "#a6cee3",
+            "#377eb8",
+            "#a65628"
+
+          ]
+        }
+      },
+      "opacity":{"value": 0.6},
+      "tooltip":[
+        {"field":"Teams", "type":"nominal","title":"Team"},
+        {"filed":"W","type":"quantitative","title":"Win","format":","},
+        {"field":"L","type":"quantitative","title":"Lose","format":","},
+        {"field":"W/L%","type":"quantitative","format":".3f"},
+        {"field":"Games","type":"quantitative","title":"Totoal Game","format":","}
+      ]
+    }
+  },
+  {
+    "mark":{
+      "type":"text",
+      "align":"right",
+      "baseline":"middle",
+      "dx":-10,
+      "fontSize":11.5,
+      "fontStyle":"italic"
+    },
+    "encoding":{
+      "text":{"field":"Teams","type":"nominal"},
+      "color":{"value":"dark blue"},
+      "opacity":{
+        "condition":{
+          "test":"datum['Teams']=='Los Angeles Lakers'||datum['Teams']=='Boston Celtics*'",
+          "value":1
+        },
+        "value":0
+      },
+      "tooltip":[
+        {"field":"Teams","type":"nominal","title":"Team"},
+        {"filed":"W","type":"quantitative","title":"Win","format":","},
+        {"field":"L","type":"quantitative","title":"Lose","format":","},
+        {"field":"Games","type":"quantitative","title":"Totoal Game","format":","},
+        {"field":"W/L%","type":"quantitative","format":".3f"}
+      ]
+    }
+  }
+]
+}
+   
