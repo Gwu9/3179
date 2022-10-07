@@ -1,37 +1,129 @@
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 500,
-  "title": {
-    "text": "The Location of NBA teams in the United States",
-    "color": "darkblue",
-    "fontSize": "20"
-  },
-  "projection": {"type": "albersUsa"},
-  "layer": [
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"height": 500,
+"title": {
+  "text":"The Location of NBA teams in the United States",
+  "color": "darkblue",
+  "fontSize" : 20},
+  "params":[
     {
-      "data": {
-        "url": "https://gwu9.github.io/3179/assignment2/america_g.json",
-        "format": {
-          "type": "topojson",
-          "feature": "ne_110m_admin_1_states_provinces"
-        }
-      },
-      "mark": {"type": "geoshape", "fill": "lightblue", "stroke": "white"}
+      "name":"zoom_level",
+      "value": 500,
+      "bind":{
+        "input":"range",
+        "min":0,
+        "max":1000,
+        "step":1,
+        "name":"Zoom:"
+      }
     },
     {
-      "data": {"url": "https://gwu9.github.io/3179/assignment2/data.json"},
-      "encoding": {
-        "longitude": {"field": "lon", "type": "quantitative"},
-        "latitude": {"field": "lat", "type": "quantitative"}
-      },
-      "layer": [
-        {"mark": {"type": "circle", "color": "orange"}},
-        {
-          "mark": {"type": "text", "dy": -10},
-          "encoding": {"text": {"field": "city", "type": "nominal"}}
-        }
-      ]
+      "name":"center_to",
+      "value":[-81.49, 40],
+      "bind":{
+        "input":"select",
+        "options":[
+          [-81.49, 40],
+          [-112.073844, 33.448457],
+          [-84.39, 33.76],
+          [-111.892622, 40.7547],
+          [-71.0593,42.3667],
+          [-86.147685, 39.790942],
+          [-96.7970, 32.7767]
+
+          
+        ],
+        "labels":[
+          "All",
+          "Pacific Division",
+          "Southeast Division",
+          "Northwest Division",
+          "Atlantic Division",
+          "Central Division",
+          "Southwest Division"
+        ],
+        "name":"Map Centre:"
+      }
     }
-  ]
+  
+  ],
+  "projection": {
+    "type": "albers",
+    "center":{"expr":"center_to"},
+    "scale":{"expr":"zoom_level"}
+  },
+"layer": [
+  {
+    "data": {
+      "url": "/america_g.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_1_states_provinces"
+      }
+    },
+    "transform":[{
+      "lookup":"properties.name",
+      "from":{
+        "data":{
+          "url":"/data.json"
+        },
+        "key":"name",
+        "fields":["number"]
+      }
+    }],
+    "mark":"geoshape",
+    "encoding":{
+      "color":{
+        "field":"number",
+        "type":"nominal"
+      }
+    }
+     
+  },
+  {
+    "data": {
+      "url": "/data.json"
+    },
+    "encoding": {
+      "longitude": {
+        "field": "lon",
+        "type": "quantitative"
+      },
+      "latitude": {
+        "field": "lat",
+        "type": "quantitative"
+      }
+    },
+    "layer": [{
+      "mark": {
+        "type": "circle",
+        "color": "orange"
+      }
+    }, 
+    {
+      "mark":{
+        "type":"geoshape"
+      },
+        "encoding":{
+          "color":{
+            "field":"number",
+            "type":"nominal"
+          },
+          "tooltip": [
+            {"field": "Team", "type": "nominal"},
+            {"field": "name", "type": "nominal","title":"State"}
+          ]
+        }
+
+  },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -10
+      },
+      "encoding": {
+        "text": {"field": "city", "type": "nominal"}
+      }
+    }]
+  }
+]
 }

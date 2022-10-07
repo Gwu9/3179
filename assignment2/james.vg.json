@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "https://gwu9.github.io/3179/assignment2/James..csv"
+      "url": "/James..csv"
     },
     "vconcat": [
       {

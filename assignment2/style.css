@@ -3,23 +3,27 @@ body *{
 }
 
 h1 {
-    font-weight: 900;
+    font-size: 200px;
+    text-align: center;
 }
 
 body {
-    background-color: lightgray;
+    background-color: #94bbe9;
 }
 
 .page {
-    width: 850px;
-    background-color: white;
+    width: 700px;
+    background-color: #94bbe9;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .vis-container {
     width: 100%;
+    text-align: center;
 }
 
 .description h2,
@@ -27,12 +31,12 @@ h1 {
     margin-top: 0px;
 }
 
-.description-right {
-    padding-left: 20px;
+.description-top {
+    padding-left: 50px;
 }
 
 .description-left {
-    padding-right: 20px;
+    padding-right: 40px;
 }
 
 .pure-g {
@@ -41,4 +45,32 @@ h1 {
 
 .small-font {
     font-size: 14px;
+}
+
+.NBA-Emblem{
+    width: 1500px;
+    height:400px
+}
+
+.correlation-container{
+    width: auto;
+    height: auto;
+}
+
+.description-bottom{
+    padding-bottom: 100%;
+    margin-left: 20px;
+    margin-left: 20px;
+}
+
+.logo-img{
+    width:150px;
+    height:150px;
+}
+p{
+    text-align: center;
+}
+.NBA-name{
+    color:goldenrod;
+    font-style: italic;
 }

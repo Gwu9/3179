@@ -3,28 +3,36 @@
   "width": 600,
   "height": 500,
   "title": "Win Games per NBA Team",
-  "data": {"url": "https://gwu9.github.io/3179/assignment2/NBA team and location W &L.csv"},
+  "data": {"url": "/NBA team and location W &L.csv"},
   "params":[
     {
-      "name":"Conference_selection",
+      "name":"Division_selection",
       "bind":{
         "input":"select",
         "options":[
           null,
-          "Eastern Conference",
-          "Western Conference"
+          "Pacific Division",
+          "Central Division",
+          "Atlantic Division",
+          "Southeast Division",
+          "Southwest Division",
+          "Northwest Division"
         ],
         "labels":[
           "Show All",
-          "Eastern Conference",
-          "Western Conference"
+          "Pacific Division",
+          "Central Division",
+          "Atlantic Division",
+          "Southeast Division",
+          "Southwest Division",
+          "Northwest Division"
         ],
-        "name":"Conference Selection:"
+        "name":"Division Selection:"
       }
     }
   ],
   "transform":[
-    {"filter":"Conference_selection == null || datum.Conference == Conference_selection"}
+    {"filter":"Division_selection == null || datum.Division == Division_selection"}
 
   ],
   "mark": "circle",
@@ -53,16 +61,25 @@
         "legend":{"format":","}
       },
       "color":{
-        "field":"Conference",
+        "field":"Division",
         "type":"nominal",
         "scale":{
           "domain":[
-             "Eastern Conference",
-              "Western Conference"
+            "Pacific Division",
+            "Central Division",
+            "Atlantic Division",
+            "Southeast Division",
+            "Southwest Division",
+            "Northwest Division"
           ],
           "range":[
             "#e41a1c",
-            "#984ea3"
+            "#984ea3",
+            "#ff7f00",
+            "#a6cee3",
+            "#377eb8",
+            "#a65628"
+
           ]
         }
       },
