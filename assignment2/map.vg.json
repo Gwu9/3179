@@ -1,0 +1,89 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"height": 500,
+"width":800,
+"title": {
+  "text":"The Location of NBA teams in the United States",
+  "color": "darkblue",
+  "fontSize" : 20},
+
+"layer": [
+  {
+    "data": {
+      "url": "/america_g.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_1_states_provinces"
+      }
+    },
+    "transform":[{
+      "lookup":"properties.name",
+      "from":{
+        "data":{
+          "url":"/data.json"
+        },
+        "key":"name",
+        "fields":["number"]
+      }
+    }],
+    "mark":"geoshape",
+    "encoding":{
+      "color":{
+        "field":"number",
+        "type":"quantitative",
+        "scale":{
+            "domain":[0, 1, 2, 3, 4],
+            "range": ["#f0f0f0","#deebf7","#9ecae1","#3182bd"]
+        }
+        
+      }
+    }
+     
+  },
+  {
+    "data": {
+      "url": "/data.json"
+    },
+    "encoding": {
+      "longitude": {
+        "field": "lon",
+        "type": "quantitative"
+      },
+      "latitude": {
+        "field": "lat",
+        "type": "quantitative"
+      }
+    },
+    "layer": [{
+      "mark": {
+        "type": "circle",
+        "color": "darkblue"
+      }
+    }, 
+    {
+      "mark":{
+        "type":"geoshape"
+      },
+        "encoding":{
+          "color":{
+            "field":"number",
+            "type":"quantitative",
+            "scale":{
+                "domain":[0, 1, 2, 3, 4],
+                "range": ["#f0f0f0","#deebf7","#9ecae1","#3182bd"]
+            }
+          }
+        }
+
+  },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -10
+      },
+      "encoding": {
+        "text": {"field": "Team", "type": "nominal"}
+      }
+    }]
+  }
+]
+}
