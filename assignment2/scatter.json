@@ -4,6 +4,34 @@
       "row": ["Field Goal Percentage", "Assists_per_Game", "Points_per_Game","Total Rebounds_per_Game"],
       "column": ["Total Rebounds_per_Game", "Points_per_Game", "Assists_per_Game","Field Goal Percentage"]
     },
+    "params":[
+      {
+        "name":"Top_Players",
+        "bind":{
+          "input":"select",
+          "options":[
+            null,
+            "LeBron James",
+            "James Harden",
+            "Nikola Jokic",
+            "Stephen Curry",
+            "Giannis Antetokounmpo"
+          ],
+          "labels":[
+            "Show All",
+            "LeBron James",
+            "James Harden",
+            "Nikola Jokic",
+            "Stephen Curry",
+            "Giannis Antetokounmpo"
+          ],
+          "name":"Top 5 Players"
+        }
+      }
+    ],
+    "transform":[
+      {"filter":"Top_Players == null||datum.Name == Top_Players"}
+    ],
     "spec": {
       "data": {"url": "https://gwu9.github.io/3179/assignment2/five MVP .csv"},
       "mark": "point",
