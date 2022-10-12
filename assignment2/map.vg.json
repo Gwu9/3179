@@ -5,6 +5,7 @@
   "text":"The Location of NBA teams in the United States",
   "color": "darkblue",
   "fontSize" : 20},
+ "projection":{"type":"albersUsa"},
 
 "layer": [
   {
