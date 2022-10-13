@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>NBA Teams Analysis</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style.css" media="all">
+
+
+</head>
+
+<body>
+
+  <div class="page">
+ 
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>NBA Analysis in United States</h1>
+        <p class = "author-name">Author: Guohua Wu</p>
+      </div>
+    </div>
+    
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+
+  <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class = "description-bottom">
+          <p>The NBA has fans all over the world. In order to know more about NBA players and teams,
+            This report will mainly discuss NBA teams and players that get excellent results.Firstly, it will introduce the 
+            locations of NBA teams in United States.
+             Meanwhile, it also shows the games are won and losed for NBA teams. To further explore NBA teams 
+             the report contains top five champtionship team to show the avergae points during thier championship sessions. 
+             Players are also important to teams, thus, there are top5 MVP active players with four different variables to 
+            analysis their performance.  </p>
+        </div>
+      </div>
+     </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="Vis1" class="vis-container"></div>
+        <div class = "description-bottom">
+            <h2>Locations of NBA teams</h2>
+            <p class = "description-bottom">This map shows the locations of NBA teams in the United States. Most teams are on the 
+              coast or along rivers. Becuase it needs to attract more audiences to watch games with convenient trafffics. 
+              Meanwhile, the economic development for coastal cities is faster than inland cities, whihch can support ecxpense for teams.
+              There are four NBA teams (<span class = 'NBA-name'> Los Angeles Lakers, Sacramento Kings, 
+              Golden State Warriors and Los Angeles Clippers </span>) 
+              in California state, meanwhile, Texas state also have three NBA teams (Dallas Mavericks, 
+              San Antonio Spurs, Houston Rockets). Most of states have two or one NBA teams. </p>
+          </div>
+        </div>
+      </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="Vis2" class="vis-container">
+        </div>
+        <div class = "description-bottom">
+            <h2>Win games</h2>
+            <p class = "description-bottom">The bubbler plot shows the win games, lose games and total games per NBA team. 
+              There are six divisions (<span class = "NBA-name">Pacific division, Central division, Atlantic division,
+                 Southeast division, Southwest division and Northwest Division </span>). The most outstanding teams are <span class = "NBA-top">Los Angeles Lakers </span>
+              and <span class = "NBA-top">Boston Celtics</span>, Los Angeles Lakers has 3460-win games and <span class = "NBA-number">59.2%</span> win/lose rate, 
+              which is higher than other teams. <span class = "NBA-top">Boston Celtics </span> has 3513-win games 
+              and <span class = "NBA-number">59.0% </span> win /lose rate follow the Los Angeles Lakers.
+         </p>
+          </div>
+        </div>
+    </div>
+  
+
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+      <img src = "logos/boston celtics.png" width ="150", height="150" alt=""/>
+        <img src = "logos/los angeles lakers.png" width ="150", height="150" alt=""/>
+        <img src = "logos/golden state warriors.png" width ="150", height="150" alt=""/>
+        <img src = "logos/chicago bulls.png" width ="150", height="150" alt=""/>
+        <img src = "logos/nba-san-antonio-spurs-logo-480x480.png" width ="150", height="150" alt=""/>
+    </div>
+    </div>
+    
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="Vis3" class="vis-container"> </div>
+        <div class = "description-bottom">
+          <h2>Average Point per game</h2>
+          <p class = "description-bottom">This idiom shows the top five championship teams (<span class = "NBA-name">Boston Celtics, Los Angeles Lakers, Golden State Warriors,
+             Chicago Bulls and San Antonio Suprs </span>). Boston Celtics and Los Angeles Lakers won <span class = "NBA-number">17</span> champs; 
+             Golden State Warriors won <span class = "NBA-number"> 7</span> champs followed the two teams. The average point per game for Boston Celtics 
+             over 100 during the champ sessions, which played very steadily. While the average point per game for 
+             Los Angeles Lakers is waved between 88 to 122. Overall, those top five championship teams’ average 
+             point per game are floated between <span class = "NBA-number"> 90 </span> to <span class = "NBA-number">128</span>.  </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- end pure grid group -->
+     <!-- pure grid group -->
+     <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div id="Vis4" class="vis-container"></div>
+        <div class = "description-bottom">
+            <h2>Top 5 MVP</h2>
+            <p class = "description-bottom">Those area charts choose four variables to analysis top five MVP active players. 
+                The four variables include field goal percentage, total rebounds per game, point per game and assists per game. 
+                In addition, <span class = "NBA-top"> LeBron James </span> got <span class = "NBA-number">four</span> MVP, Nikola Jokic, Stephen Curry and Giannis Antetokounmpo got 2 MVP and 
+                James Harden got 1 MVP.  It is clearly seen that the player’s total scores were stable and fluctuated along similar 
+                curve.  For the <span class = "NBA-par">total rebounds per game </span>, Nikola shows an outstanding performance which is higher than other 
+                four players. Meanwhile, the point of rebounds for Giannis is gradually increase during recent years. 
+                James Harden and LeBron James perform well for assistants between 2016 and 2019. Stephen Curry and James Harden 
+                have excellent points from 2015 to 2018. Those four variables show the different strengths and weaknesses 
+                of each player. Additionally, each players play different important roles in their teams.   </p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-1-2 small-font">
+        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">Guohua Wu
+        </a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
+      </div>
+    </div>
+
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "/map.vg.json";
+    var specVis2 = "/bubplot.vg.json";
+    var sepcVis3 = "/chan_average_point.json"
+    var sepcVis4 = "/top5mvp.vg.json"
+
+    vegaEmbed('#Vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#Vis2', specVis2, { "actions": false });
+
+    vegaEmbed('#Vis3',sepcVis3,{"action": false});
+
+    vegaEmbed('#Vis4', sepcVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+  </script>
+</body>
+
+</html>

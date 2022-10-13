@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{"text":"Top 5 MVP"},
+    "repeat":["Field Goal Percentage","Total Rebounds per Game","Assists per Game","Points per Game"],
+    "columns":2,
+    "spec":{
+    "data": {"url": "/fiveMVPre.csv"},
+    "mark": "area",
+    "width":300,
+    "encoding": {
+      "x": {
+        "timeUnit": "year", "field": "Season"
+      },
+      "y": {
+        "field": {"repeat": "repeat"},
+        "type":"quantitative"
+      },
+      "color":{"field":"Name",
+                "type":"nominal",
+                "scale":{
+                    "domain":[
+                      "LeBron James",
+                      "James Harden",
+                      "Nikola Jokic",
+                      "Stephen Curry",
+                      "Giannis Antetokounmpo"
+                    ],
+                    "range":[
+                      "#9467bd",
+                      "#1f77b4",
+                      "#aec7e8",
+                      "#e7ba52",
+                      "#31a354"
+      
+                    ]}
+    },
+    "tooltip":[
+      {"field":"Name","type":"nominal"},
+      {"field":"Season","timeUnit":"year","type":"temporal","title":"Year"},
+      {"field":"Field Goal Percentage","type":"quantitative"},
+      {"field":"Total Rebounds per Game","type":"quantitative"},
+      {"field":"Assists per Game","type":"quantitative"},
+      {"field":"Points per Game","type":"quantitative"}
+     ]
+ }
+  }
+}
+  
+  

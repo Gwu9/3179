@@ -1,0 +1,80 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text":"Top5 Championship Team"},
+    "data": {
+      "url": "/chan_averagepo.csv"
+    },
+    "vconcat": [
+      {
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "brush",
+              "title": "Team",
+              "field": "Team",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Boston Celtics", "Los Angeles Lakers", "Golden State Warriors", "Chicago Bulls", "San Antonio Spurs"],
+                "range": ["#31a354", "#9467bd","#e7ba52", "#1f77b4", "#aec7e8"]
+              }
+            },
+            "value": "lightgray"
+          },
+          "size": {
+            "title": "Average Point per Game",
+            "field": "average points per game",
+            "scale": {"domain": [80, 120]},
+            "type": "quantitative"
+          },
+          "x": {
+            "field": "Year",
+            "timeUnit": "year",
+            "title": "Year"
+          },
+          "y": {
+            "title": "Championship Session Point",
+            "field": "average points per game",
+            "scale": {"domain": [80, 140]},
+            "type": "quantitative"
+          },
+          "tooltip": [
+            {"field": "Year","type":"temporal","timeUnit":"year","title":"Year"},
+            {"field": "average points per game", "type":"quantitative", "title": "Average points/game"}
+          ]
+        },
+        "width": 600,
+        "height": 300,
+        "mark": "circle",
+        "params": [{
+          "name": "brush",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }],
+        "transform": [{"filter": {"param": "click"}}]
+      },
+      {
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "click",
+              "field": "Team",
+              "scale": {
+                "domain": ["Boston Celtics", "Los Angeles Lakers", "Golden State Warriors", "Chicago Bulls", "San Antonio Spurs"],
+                "range": ["#31a354", "#9467bd", "#e7ba52", "#1f77b4", "#aec7e8"]
+              }
+            },
+            "value": "lightgray"
+          },
+          "x": {"aggregate": "count"},
+          "y": {"title": "Team", "field": "Team"}
+        },
+        "width": 600,
+        "mark": "bar",
+        "params": [{
+          "name": "click",
+          "select": {"type": "point", "encodings": ["color"]}
+        }],
+        "transform": [{"filter": {"param": "brush"}}]
+      }
+    ]
+  }
+  

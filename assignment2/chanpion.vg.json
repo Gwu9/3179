@@ -1,0 +1,50 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{"text":"Top 5 Teams"},
+    "width": 400,
+    "data": {
+      "values": [
+        {"name": "Boston Celitics", "count": 17},
+        {"name": "Los Angeles", "count": 17},
+        {"name": "Golden State Warriors", "count": 6},
+        {"name": "Chicago Bulls", "count": 5},
+        {"name": "San Antonio Spurs", "count": 5},
+        {"name": "Philadelphia 76ers", "count": 3},
+        {"name": "Detroit Pistons", "count": 3},
+        {"name": "Miami Heat", "count": 3},
+        {"name": "Houston Rockets", "count": 2},
+        {"name": "Milwaukee Bucks", "count": 2}
+      ]
+    },
+    "encoding": {
+      "y": {"field": "name", "type": "nominal", "sort": "-x", "title": null},
+      "x": {"field": "count", "type": "quantitative", "title": null}
+    },
+    "layer": [{
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Number of Championship"
+        }
+      }
+    }, {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "xOffset": -4,
+        "aria": false
+      },
+      "encoding": {
+        "text": {"field": "count", "type": "quantitative"},
+        "color": {
+          "condition": {
+            "test": {"field": "count", "gt": 10},
+            "value": "white"
+          },
+          "value": "black"
+        }
+      }
+    }]
+  }

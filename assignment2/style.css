@@ -1,0 +1,97 @@
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    margin-left:30px;
+    font-style: inherit;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#94bbe9;
+   
+}
+
+h2 {
+font-size: 20px;
+margin-left: 20px;
+font-style:oblique;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color:#94bbe9;
+}
+
+.page {
+    width: 900px;
+    background-color: whitesmoke;
+    margin:auto;
+    padding: 50px;
+    padding-top:35px;
+}
+
+.vis-container {
+    width: 100%;
+    
+}
+
+.description h2,
+h1 {
+    margin-top: 0px;
+}
+
+.description-top {
+    margin-left: 20px;
+    margin-right:20px;
+    text-align:left;
+}
+
+.description-left {
+    padding-right: 40px;
+}
+
+.pure-g {
+    margin-bottom: 40px;
+}
+
+.small-font {
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+
+.description-bottom{
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.logo-img{
+    width:150px;
+    height:150px;
+}
+
+.NBA-name{
+    color:blueviolet;
+    font-style: italic;
+    font-family: serif;
+}
+.NBA-top{
+    color:rgb(234, 201, 14);
+    font-style: italic;
+}
+.NBA-number{
+    color:#d95f0e;
+    font-weight: bold;
+}
+.author-name{
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: left;
+    font-size: 18px;
+    font-style: italic;
+}
+.NBA-par{
+    color:sandybrown;
+}

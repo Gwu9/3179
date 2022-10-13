@@ -1,0 +1,86 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"height": 700,
+"width":700,
+"title": {"text":"The Location of NBA teams in the United States","anchor": "start"},
+  "projection":{"type":"albersUsa"},
+
+"layer": [
+  {
+    "data": {
+      "url": "/america_g.json",
+      "format": {
+        "type": "topojson",
+        "feature": "ne_110m_admin_1_states_provinces"
+      }
+    },
+    "transform":[{
+      "lookup":"properties.name",
+      "from":{
+        "data":{
+          "url":"/data.json"
+        },
+        "key":"name",
+        "fields":["number"]
+      }
+    },
+  {"calculate": "datum.number + 0.1","as":"Team numbers"}
+],
+    "mark":{"type":"geoshape","stroke":"white"},
+    "encoding":{
+      "color":{
+        "field":"Team numbers",
+        "type":"quantitative",
+        "scale":{
+            "domain":[0, 1, 2, 3, 4],
+            "range": ["#f0f0f0","#deebf7","#9ecae1","#3182bd"]
+        }
+        
+      },
+      "tooltip":[
+        {"field":"properties.name","type":"nominal","title":"state"}
+        ]
+    }
+     
+  },
+  {
+    "data": {
+      "url": "/data.json"
+    },
+    "encoding": {
+      "longitude": {
+        "field": "lon",
+        "type": "quantitative"
+      },
+      "latitude": {
+        "field": "lat",
+        "type": "quantitative"
+      }
+    },
+    "layer": [{
+      "mark": {
+        "type": "circle",
+        "color": "orange"
+      }
+    }, 
+    {
+      "mark":{
+        "type":"geoshape"
+      }
+
+  },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -5,
+        "dx":-5,
+        "fontStyle":"italic",
+        "fontSize":10.5
+      },
+      "encoding": {
+        "text": {"field": "Team", "type": "nominal"},
+        "color":{"value":"#e6550d"}
+      }
+    }]
+  }
+]
+}
