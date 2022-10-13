@@ -112,10 +112,10 @@
         "value":0
       },
       "tooltip":[
-        {"field":"Teams","type":"nominal","title":"Team"},
-        {"field":"W","type":"quantitative","title":"Win","format":","},
-        {"field":"Games","type":"quantitative","title":"Totoal Game","format":","},
-        {"field":"W/L%","type":"quantitative","format":".3f"}
+        {"field":"Teams", "type":"nominal","title":"Team"},
+        {"filed":"W","type":"quantitative","title":"Win","format":","},
+        {"field":"W/L%","type":"quantitative","format":".3f"},
+        {"field":"Games","type":"quantitative","title":"Totoal Game","format":","}
       ]
     }
   }
