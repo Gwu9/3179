@@ -4,7 +4,7 @@
     "repeat":["Field Goal Percentage","Total Rebounds per Game","Assists per Game","Points per Game"],
     "columns":2,
     "spec":{
-    "data": {"url": "/fiveMVPre.csv"},
+    "data": {"url": "https://gwu9.github.io/3179/assignment2/data/fiveMVPre.csv"},
     "mark": "area",
     "width":300,
     "encoding": {
